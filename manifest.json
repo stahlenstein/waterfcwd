@@ -1,0 +1,31 @@
+{
+  "name": "Water Extended",
+  "version": "0.01",
+  "description": "Adding some spice to fcwd",
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "icons": {
+    "32": "/images/star_32.ico",
+    "48": "/images/star_48.ico",
+    "128": "/images/star_128.ico"
+},
+  "manifest_version": 3,
+  "permissions": ["scripting", "nativeMessaging", "tabs", "notifications"],
+  "host_permissions": ["<all_urls>"],
+  "content_scripts": [
+    {
+      "matches": ["*://*.floydcountyga.gov/*"],
+      "all_frames": true,
+      "js": ["./content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["./*.js", "./supabase.js", "water.css", "water.js", "*.html"],
+      "matches": ["*://*/*"]
+    }
+  ]
+}
