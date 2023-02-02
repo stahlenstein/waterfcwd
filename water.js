@@ -39,7 +39,8 @@ if (window.location.href == "https://www.floydcountyga.gov/404-error") {
 </p>
                       </div>
                       <div class="topnav" data-dashlane-rid="bb4d48fc5f4d9a42" data-form-type="">
-                    <input type="text" placeholder="Search.." data-dashlane-rid="78d1f03a1b6508ea" data-form-type="">      
+                    <input type="text" placeholder="Search..." data-dashlane-rid="78d1f03a1b6508ea" data-form-type="">
+                    <button class="button" type="button">Go</button>      
                       </div>
                     </div>
                   </div>
@@ -168,3 +169,16 @@ newElement.innerHTML = "Service Address Availability";
 newElement.setAttribute("title", "Service Address Availability");
 newElement.setAttribute("href", "/404-error");
 
+
+/* const searchButton = document.querySelector("#node-2515 > div > div > div > div.topnav > button");
+
+searchButton.addEventListener("click", supaSearch);
+
+function supaSearch() {
+  if (document.querySelector("#node-2515 > div > div > div > div.topnav > input[type=text]").value !== null) {
+    const searchText = document.querySelector("#node-2515 > div > div > div > div.topnav > input[type=text]").value
+    console.log(searchText)
+    const send = chrome.runtime.sendMessage({ greeting: searchText })
+    send.then(handleResponse, handleError)
+  };
+} */
