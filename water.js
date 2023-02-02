@@ -22,7 +22,7 @@ if (window.location.href == "https://www.floydcountyga.gov/404-error") {
       <div class="content-inner-border">
         <a id="main-content"></a>
         <div class="title-wrapper">
-          <h1 id="page-title">Water</h1>
+          <h1 id="page-title">Service Address Availability</h1>
         </div>
         <div class="region region-content">
           <div id="block-system-main" class="block block-system">
@@ -34,37 +34,14 @@ if (window.location.href == "https://www.floydcountyga.gov/404-error") {
                   <div class="field field-name-body field-type-text-with-summary field-label-hidden">
                     <div class="field-items">
                       <div class="field-item even" property="content:encoded">
-                        <p>The constant goal at Floyd County Water Department is to provide residents with safe and dependable drinking water while continually improving the water treatment process and protecting our water resources.</p>
                         <p>
-                          <a href="https://floydub.munisselfservice.com/citizens/UtilityBilling/Default.aspx" target="_blank">
-                            <img alt="" src="/sites/default/files/imageattachments/wysiwyg/button_for_paying_water_bill.png" style="width: 300px; height: 100px; border-width: 3px; border-style: solid; float: left;" width="300" height="100">
-                          </a>
-                        </p>
+    Use the search tool below to check for an address within Floyd County, Georgia to ensure that it has water service. You can also use the search tool below if you need to know whether your address is service by Floyd County Water or by Rome City Water.
+</p>
+                      </div>
+                      <div class="topnav" data-dashlane-rid="bb4d48fc5f4d9a42" data-form-type="">
+                    <input type="text" placeholder="Search.." data-dashlane-rid="78d1f03a1b6508ea" data-form-type="">      
                       </div>
                     </div>
-                  </div>
-                  <div style="clear:both;"></div>
-                  <div class="link-wrapper">
-                    <ul class="links inline">
-                      <li class="addtoany first">
-                        <div>
-                          <script type="text/javascript">
-                            <!--//
-                            -->
-                          <![CDATA[//>
-															<!--
-if(window.da2a)da2a.script_load();
-//-->
-															<!]]>
-                          </script>
-                        </div>
-                      </li>
-                      <li class="print_html last">
-                        <a href="/print/2515" title="Display a printer-friendly version of this page." class="print-page" onclick="window.open(this.href); return false" rel="nofollow">
-                          <img class="print-icon" typeof="foaf:Image" src="https://www.floydcountyga.gov/sites/all/modules/print/icons/print_icon.png" width="16" height="16" alt="Printer-friendly version" title="Printer-friendly version">
-                        </a>
-                      </li>
-                    </ul>
                   </div>
                 </div>
               </div>
@@ -111,6 +88,8 @@ if(window.da2a)da2a.script_load();
           </li>
           <li>
             <a href="/water/page/service-requests" title="Service Requests">Service Requests</a>
+          </li><li>
+            <a href="/404-error" title="Service Address Availability">Service Address Availability</a>
           </li>
           <li>
             <a href="/water/page/water-billing-information" title="Water Billing Information">Water Billing Information</a>
@@ -166,11 +145,13 @@ if(window.da2a)da2a.script_load();
     </div>
   </div>
 </div>
+
 </div>
+    </div>
 `;
     const pageTitle = document.querySelector("head > title");
     pageTitle.setAttribute("title", "Service Address Availability")
-    pageTitle.innerHTML = "Water | Service Address Availability" 
+    pageTitle.innerHTML = "Water | Service Address Availability"
 };
 
 
