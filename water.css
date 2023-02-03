@@ -64,3 +64,8 @@ body {
   align-self: center;
   border-color: darkgray;
 }
+
+.buttondiv {
+  display: flex;
+
+}

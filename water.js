@@ -38,9 +38,9 @@ if (window.location.href == "https://www.floydcountyga.gov/404-error") {
     Use the search tool below to check for an address within Floyd County, Georgia to ensure that it has water service. You can also use the search tool below if you need to know whether your address is service by Floyd County Water or by Rome City Water.
 </p>
                       </div>
-                      <div class="topnav" data-dashlane-rid="bb4d48fc5f4d9a42" data-form-type="">
-                    <input type="text" placeholder="Search..." data-dashlane-rid="78d1f03a1b6508ea" data-form-type="">
-                    <button class="button" type="button">Go</button>      
+                      <div class="topnav" data-dashlane-rid="bde04cd767bcc86a" data-form-type="">
+                    <input type="text" placeholder="Search..." data-dashlane-rid="ae20029c09068e4c" data-form-type="">
+                    <div class="buttondiv"><button class="button" type="button" data-dashlane-rid="dc76f0e6361deb20" data-dashlane-label="true" data-form-type="">Go</button></div>
                       </div>
                     </div>
                   </div>

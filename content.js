@@ -22,18 +22,28 @@ function addJavaScript(filename) {
   document.getElementsByTagName("body")[0].append(script);
 };
 
-let searchButton = document.querySelector("#node-2515 > div > div > div > div.topnav > button");
+window.onload = function(){
+  var searchButton = document.getElementsByClassName('buttondiv')[0];
+  searchButton.addEventListener('click', supaSearch);
 
-if(searchButton) {
-  console.log('something happened');
-searchButton.addEventListener('click', supaSearch())
-};
-
-function supaSearch() {
-  if (document.querySelector("#node-2515 > div > div > div > div.topnav > input[type=text]").value !== null) {
-    const searchText = document.querySelector("#node-2515 > div > div > div > div.topnav > input[type=text]").value
-    console.log(searchText)
-    const send = chrome.runtime.sendMessage({ greeting: searchText });
-    send.then(handleResponse, handleError)
+  function supaSearch() {
+    if (document.querySelector("#node-2515 > div > div > div > div.topnav > input[type=text]").value !== null) {
+      const searchText = document.querySelector("#node-2515 > div > div > div > div.topnav > input[type=text]").value
+      console.log(searchText)
+      const send = chrome.runtime.sendMessage({ greeting: searchText });
+      send.then(handleResponse, handleError)
+    };
   };
-};
+
+  function handleResponse(message) {
+    // console.log(`Message from the background script: ${message.response}`)
+    const recievedData = message.response;
+    if (recievedData !== null) {
+      console.log(recievedData)
+    }
+  }
+
+  function handleError(error) {
+    console.log(`Error: ${error}`);
+  }
+}

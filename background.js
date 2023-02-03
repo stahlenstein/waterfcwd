@@ -26,34 +26,30 @@ console.log("supabase?", supabase);
 
 async function searchData(searchText) {
   // Communicating with content scripts
-  let { data: Meters, error } = await supabase // Basically stating 'let Reading_Stats = supabase.Reading_Stats...(etc) but more complicated
-    .from("Meters") // Declaring what table to select
-    .select() // Select all but kinda redundant by '.limit('1')'
-    .textSearch('Address', searchText, {
-      type: 'websearch',
-      config: 'english'
-    }) 
-  
+  const { data: Meters, error } = await supabase // Basically stating 'let Reading_Stats = supabase.Reading_Stats...(etc) but more complicated
+    .from('Meters') // Declaring what table to select
+    .select('Address') // Select all but kinda redundant by '.limit('1')'
+    .ilike('Address', `searchText`)
+
   // Issue Token
   if (error) {
     console.log("There was an Error:", error);
   }
   // Receive Token
   if (Meters) {
-    console.log("Supabase Data Returned:", Meters);
+    console.log("Supabase Data Returned:", Meters, "for input:", searchText);
   }
   return Meters
 };
 
 function handleMessage(request, sender, sendResponse) {
   console.log(`A content script sent a message: ${request.greeting}`);
-  const searchTextValue = request.greeting
-  console.log(searchTextValue)
+  const searchText = request.greeting
+  console.log(searchText)
   var accData = searchData(searchText)
   accData.then(value => {
     value;
     if (value.length !== 0) {
-      const accountData = [accNo, CID, Max, Mean, Median, Min, Name, STD, Service, VAR, Count]
       console.log(accountData)
       sendResponse({ response: accountData });
     }
